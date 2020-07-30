@@ -10,6 +10,13 @@ filenames = os.listdir("G:/DCIM/100CANON")
 print (filenames)
 
 #tee kansiot ennen looppia
+pictures = []
+videos = []
 
 for i in filenames:
     if "jpg" in i or "cr2" in i:
+    	pictures.append(i)
+    else:
+    	videos.append(i)
+    	
+
