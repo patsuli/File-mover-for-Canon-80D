@@ -28,11 +28,13 @@ parent_dir = "F:/herra MSTK"
 
 #päivämäärä kansion nimeksi
 date = datetime.datetime.now()
-print(type(date))
+#print(type(date))
+if int(date.day)<10:
+	day = "0" + str(date.day)
 if int(date.month)<10:
 	month = "0" + str(date.month)
-paiva = str(date.day) + month + str(date.year)
-print(paiva)
+paiva = day + month + str(date.year)
+#print(paiva)
 
 directory = paiva
 path = os.path.join(parent_dir, directory)
@@ -40,8 +42,10 @@ path = os.path.join(parent_dir, directory)
 #luo kansio jos kansioo ei löydy
 if not os.path.isdir(path):
 	os.mkdir(path)
-	os.mkdir(path+"/videot")
-	os.mkdir(path+"/kuvat")
+	videopath = os.path.join(path,"videot")
+	os.mkdir(videopath)
+	picpath = os.path.join(path,"kuvat")
+	os.mkdir(picpath)
 
 #tee kansiot ennen looppia
 pictures = []
