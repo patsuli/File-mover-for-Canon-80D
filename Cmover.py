@@ -35,7 +35,11 @@ print(paiva)
 
 directory = paiva
 path = os.path.join(parent_dir, directory)
-os.mkdir(path)
+
+#luo kansio jos kansioo ei löydy
+if not os.path.isdir(path):
+	os.mkdir(path)
+	
 #tee kansiot ennen looppia
 pictures = []
 videos = []
