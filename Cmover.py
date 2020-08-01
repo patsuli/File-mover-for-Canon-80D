@@ -1,8 +1,9 @@
 import os
 import datetime
+import shutil
 
-
-#filenames = os.listdir("G:/DCIM/100CANON")
+source="G:/DCIM/100CANON"
+filenames = os.listdir(source)
 
 #lists of file types
 #video_types = ["mp4"]
@@ -39,14 +40,22 @@ path = os.path.join(parent_dir, directory)
 #luo kansio jos kansioo ei löydy
 if not os.path.isdir(path):
 	os.mkdir(path)
-	
+	os.mkdir(path+"/videot")
+	os.mkdir(path+"/kuvat")
+
 #tee kansiot ennen looppia
 pictures = []
 videos = []
-'''
+
+
 for i in filenames:
     if "jpg" in i or "cr2" in i:
     	pictures.append(i)
     else:
     	videos.append(i)
-'''
+
+for pic in pictures:
+	shutil.copyfile(source+"/"+pic, path+"/kuvat")
+
+for vid in videos:
+	shutil.copyfile(source+"/"+vid, path+"/videot")
