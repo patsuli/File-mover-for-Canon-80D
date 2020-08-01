@@ -59,7 +59,7 @@ for i in filenames:
     	videos.append(i)
 
 for pic in pictures:
-	shutil.copyfile(source+"/"+pic, path+"/kuvat")
+	shutil.copyfile(source+"\\"+pic, path+"\kuvat")
 
 for vid in videos:
-	shutil.copyfile(source+"/"+vid, path+"/videot")
+	shutil.copyfile(source+"\\"+vid, path+"\\videot")
