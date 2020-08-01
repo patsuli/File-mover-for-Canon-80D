@@ -15,7 +15,7 @@ import datetime
 # Directory päivittyvä kansio nimi
 
 # Parent Directory path
-parent_dir = "F:/herra MSTKs"
+parent_dir = "F:/herra MSTK"
 # Path
 
 # Create the directory
