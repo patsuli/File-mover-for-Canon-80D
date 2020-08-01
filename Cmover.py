@@ -2,7 +2,7 @@ import os
 import datetime
 import shutil
 
-source="G:/DCIM/100CANON"
+source="G:\DCIM\\100CANON"
 filenames = os.listdir(source)
 
 #lists of file types
@@ -16,7 +16,7 @@ filenames = os.listdir(source)
 # Directory päivittyvä kansio nimi
 
 # Parent Directory path
-parent_dir = "F:/herra MSTK"
+parent_dir = "F:\herra MSTK"
 # Path
 
 # Create the directory
