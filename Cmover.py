@@ -53,7 +53,7 @@ videos = []
 
 
 for i in filenames:
-    if "jpg" in i or "cr2" in i:
+    if "jpg" in i or "CR2" in i:
     	pictures.append(i)
     elif "mp4" in i:
     	videos.append(i)
