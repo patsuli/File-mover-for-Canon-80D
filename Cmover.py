@@ -55,11 +55,13 @@ videos = []
 for i in filenames:
     if "jpg" in i or "cr2" in i:
     	pictures.append(i)
-    else:
+    elif "mp4" in i:
     	videos.append(i)
 
+
 for pic in pictures:
-	shutil.copyfile(source+"\\"+pic, path+"\kuvat"+pic)
+	shutil.copyfile(os.path.join(source,pic), os.path.join(picpath,pic))
 
 for vid in videos:
-	shutil.copyfile(source+"\\"+vid, path+"\\videot"+vid)
+	shutil.copyfile(os.path.join(source,vid), os.path.join(videopath,vid))
+
