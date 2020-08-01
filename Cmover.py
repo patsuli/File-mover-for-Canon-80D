@@ -38,7 +38,7 @@ paiva = day + month + str(date.year)
 
 directory = paiva
 path = os.path.join(parent_dir, directory)
-
+print(path)
 #luo kansio jos kansioo ei löydy
 if not os.path.isdir(path):
 	os.mkdir(path)
