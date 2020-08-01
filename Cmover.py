@@ -17,7 +17,7 @@ import datetime
 # Parent Directory path
 parent_dir = "F:/herra MSTKs"
 # Path
-#path = os.path.join(parent_dir, directory)
+
 # Create the directory
 # 'GeeksForGeeks' in
 # '/home / User / Documents'
@@ -34,7 +34,8 @@ paiva = str(date.day) + month + str(date.year)
 print(paiva)
 
 directory = paiva
-
+path = os.path.join(parent_dir, directory)
+os.mkdir(path)
 #tee kansiot ennen looppia
 pictures = []
 videos = []
@@ -44,4 +45,4 @@ for i in filenames:
     	pictures.append(i)
     else:
     	videos.append(i)
-'''   	
+'''
